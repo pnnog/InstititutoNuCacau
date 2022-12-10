@@ -60,7 +60,7 @@ export default function Contato() {
         router.push('/');
         clearTimeout(timer);
       }, 3000);
-      toast.success(
+      toast(
         'Obrigado por entrar em contato. Em breve alguém da nossa equipe de suporte irá entrar em contato com você através do seu e-mail, fique atenta!',
         {
           style: {

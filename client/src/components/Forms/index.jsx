@@ -14,26 +14,28 @@ import { animateScroll as scroll } from 'react-scroll';
 
 export const FormComponent = () => {
   const [formData, setFormData] = useState({});
-  const [disable, setDisable] = useState(true);
+  const [disableExtraInputJob, setDisableExtraInputJob] = useState(true);
+  const [disableExtraInputHow, setDisableExtraInputHow] = useState(true);
   const [showTerms, setShowTerms] = useState(false);
 
   const handleChange = (e) => {
     const key = e.target.name;
     const value = e.target.value;
 
-    if (value === 'Outro') {
-      activeExtraInput();
+    if (key=== 'job' && value === 'Outro') {
+      setDisableExtraInputJob(!disableExtraInputJob);
     }
 
+    if (key=== 'how' && value === 'Outro') {
+      setDisableExtraInputHow(!disableExtraInputHow);
+    }
     if (key === 'accept' && value === 'Sim') {
       setShowTerms(true);
     }
     setFormData({ ...formData, [key]: value });
   };
 
-  const activeExtraInput = () => {
-    setDisable(false);
-  };
+ 
 
   const submitForm = async (e) => {
     e.preventDefault();
@@ -56,9 +58,7 @@ export const FormComponent = () => {
           padding: '15px 30px',
           fontSize: '1.5em',
         },
-      });
-      console.log(process.env.NEXT_PUBLIC_DB_SERVER)
-      
+      }); 
       return;
     }
 
@@ -76,7 +76,7 @@ export const FormComponent = () => {
       });
      
       scroll.scrollToTop();
-      toast.success(
+      toast(
         'Obrigado por entrar em contato. Em breve alguém da nossa equipe de suporte irá entrar em contato com você através do seu e-mail, fique atenta!',
         {
           style: {
@@ -88,7 +88,6 @@ export const FormComponent = () => {
         },
       );
     } catch (err) {
-      
       toast.error(
         'Ocorreu um erro ao tentar enviar sua mensagem, tente novamente!',
         {
@@ -278,7 +277,7 @@ export const FormComponent = () => {
             </select>
             <ExtraInput
               maxlength="30"
-              disabled={disable}
+              disabled={disableExtraInputJob}
               name="job"
               placeholder="Me conta qual sua área de negócio"
               handleChange={handleChange}
@@ -305,7 +304,7 @@ export const FormComponent = () => {
               <option value="Outro">Outro</option>
             </select>
             <ExtraInput
-              disabled={disable}
+              disabled={disableExtraInputHow}
               name="how"
               placeholder="Me conte como soube da gente"
               handleChange={handleChange}
