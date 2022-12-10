@@ -4,7 +4,7 @@ import { AlternativeButton } from '../../LinkButton/AlternativeButton(developmen
 // eslint-disable-next-line no-unused-vars
 import { Link as Scroll, animateScroll } from 'react-scroll';
 import { useRef } from 'react';
-import { BiChevronRight, BiChevronLeft } from 'react-icons/BI';
+import { BiChevronRight, BiChevronLeft } from 'react-icons/bi';
 import { cards } from '../../../utils/textCards';
 import {
   SectionWrapper,
