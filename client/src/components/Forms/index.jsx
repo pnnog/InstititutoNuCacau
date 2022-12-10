@@ -37,7 +37,6 @@ export const FormComponent = () => {
 
   const submitForm = async (e) => {
     e.preventDefault();
-
     if (
       !formData.name ||
       !formData.email ||
@@ -58,11 +57,13 @@ export const FormComponent = () => {
           fontSize: '1.5em',
         },
       });
+      console.log(process.env.NEXT_PUBLIC_DB_SERVER)
+      
       return;
     }
 
     try {
-      Axios.post(`http://localhost:3001/register`, {
+      Axios.post(`${process.env.NEXT_PUBLIC_DB_SERVER}`, {
         nome: formData.name,
         email: formData.email,
         telefone: parseInt(formData.phone),
@@ -73,6 +74,7 @@ export const FormComponent = () => {
         negocio: formData.job,
         comoConheceu: formData.how,
       });
+     
       scroll.scrollToTop();
       toast.success(
         'Obrigado por entrar em contato. Em breve alguém da nossa equipe de suporte irá entrar em contato com você através do seu e-mail, fique atenta!',
@@ -86,6 +88,7 @@ export const FormComponent = () => {
         },
       );
     } catch (err) {
+      
       toast.error(
         'Ocorreu um erro ao tentar enviar sua mensagem, tente novamente!',
         {
