@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Gellix';
+  src: url('../public/assets/Gellix/Gellix-Regular.ttf') format('truetype'), url('../public/assets/Gellix/Gellix-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gellix';
+    src: url('../public/assets/Gellix/Gellix-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gellix';
+  src:url('../public/assets/Gellix/Gellix-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+* {
+ padding:0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: 'Gellix', sans-serif;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+html{
+  font-size: 62.5%;/* equivalente a 10px*/
+}
+
+body{
+  font-size: 1rem;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p{
+  font-weight: 500;
+}
+
