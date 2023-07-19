@@ -22,8 +22,10 @@ Você pode acessar o código fonte do projeto original ou acessar ou baixá-lo
 # :checkered_flag: Abrir e rodar o projeto
 
 - Baixe os arquivos .zip do projeto no botão "CODE"
-- Instale as dependências com `npm i`
-- Rode o projeto com `npm start`
+- Instale as dependências do client com `npm i`
+- Instale as dependências do server com `npm i`
+- Rode o client com `npm run dev`
+- Rode o client com `npm run backend`
 
 # :globe_with_meridians: URL do projeto em produção
 
