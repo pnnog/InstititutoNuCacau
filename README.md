@@ -1,6 +1,6 @@
 ## Landing page para coleta de informações e captação de pessoas para vertente do Banco Nubank
 
-Este projeto foi desenvolvido em parceria com a **startup Cacau** para o **Instituto NU**, vertente filantrópica do Banco Digital Nubank. O objetivo da aplicação é captar dados dos visitantes, possibilitando um contato futuro com eles via Whatsapp, Email e outros meios de comunicação.  
+Este projeto foi desenvolvido em parceria com a **startup baiana Cacau** para o **Instituto NU**, vertente filantrópica do Banco Digital Nubank. O objetivo da aplicação é captar dados dos visitantes, possibilitando um contato futuro com eles via Whatsapp, Email e outros meios de comunicação.  
 
 # :hammer: Funcionalidades do projeto
 
